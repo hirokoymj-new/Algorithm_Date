@@ -1295,6 +1295,73 @@ console.log(tomorrow); //Fri Dec 09 2016 08:32:48 GMT-0800 (PST)
     });
   }
 }());
+```
 
+//main.js
+```js
+/* global $, alert, document, window, setInterval, clearInterval, setTimeout */
+// Load modules
+// ...
+//=include ../modules/*.js
+$(document).ready(function () {
+	// Load the rest of JavaScript files
+	// ...
+	//=include validate.custom.js
+	//=include common_ui.js
+	//=include category_ui.js
+	//=include product_ui.js
+	//=include embroidery.js
+	//=include cart_ui.js
+});
+```
+// product_ui.js
+```js
+/* global $ */
+(function () {
+    // Swatch hover-in/out
+  $('#product').find('.swatch').swatch();
+    // Image zoom functionality
+  $('#image_zoom').elevateZoom({
+    easing: true,
+    borderSize: 1,
+    borderColour: '#eee',
+    lensColour: '#eee',
+    cursor: 'pointer',
+    zoomWindowHeight: parseInt($('#single_image').find('img').data('height'), 10),
+    zoomWindowWidth: parseInt($('#single_image').find('img').data('height'), 10)
+  });
+    // Product page thumbnails
+    // ../modules/product_page.js
+  $('#product_images').thumbnails({
+    stickyThumbs: true,
+    checkHeightInterval: 200,
+    responsive: true
+  });
+    // Size validation
+  $('#cartform').validateSzEmbroidery({
+    validate: true
+  });
+  $('.ql #cartform').validateSzEmbroidery({
+    validate: false
+  });
+    // Size and price
+  $('#product').sizeControls();
+    // Featured items carousel
+  $('#complete_outfit_cycle').slick({
+    dots: false,
+    speed: 400,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: $('.nav-arrow.prev'),
+    nextArrow: $('.nav-arrow.next'),
+    responsive: [{
+      breakpoint : 1100,
+      settings : {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    }]
+  });
+}());
 
 ```
