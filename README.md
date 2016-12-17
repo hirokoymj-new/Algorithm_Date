@@ -1217,3 +1217,84 @@ console.log(tomorrow); //Fri Dec 09 2016 08:32:48 GMT-0800 (PST)
 
 }());
 ```
+//category_ui.js
+```js
+/* global $ */
+(function () {
+  var $sz_container = $('#size_container');
+  var pagination = $('.pagination');
+  // var $pageProducts = $('.product_container');
+
+  // function animateProduct(i, product, speed) {
+  //   var $product = product;
+  //   window.setTimeout(function() {
+  //     $product.addClass('animated-fade-in');
+  //   }, speed * i);
+  // }
+
+  function categorySwatchHover () {
+    var regex = /[A-Z]+\.JPG/;
+    var categoryPageSwatch = $('.product_container .alternates').find('.swatch');
+    function hover_in() {
+      var product_img;
+      var c_id;
+      var src;
+      var new_src;
+
+      c_id = $(this).attr('data-color-id');
+      product_img = $(this).parent().parent().find('.main-img');
+      if (c_id) {
+        src = product_img.attr('src');
+        new_src = src.replace(regex, c_id + '.JPG');
+        product_img.attr('src', new_src);
+      }
+    }
+
+    function hover_out() {
+      var product_img = $(this).parent().parent().find('.main-img');
+      product_img.attr('src', product_img.data('src'));
+    }
+
+    if (categoryPageSwatch.length) {
+      categoryPageSwatch.hover(hover_in, hover_out);
+    }
+  }
+
+  // $pageProducts.each(function(id) {
+  //   $(this).addClass('invisible');
+  //   animateProduct(id, $(this), 75);
+  // });
+
+    // ../modules/quicklook.js
+  quicklook.init();
+    // don't show empty size container (even if contains hidden items)
+  if ($sz_container.children().length < 2) {
+    $sz_container.hide();
+  }
+
+    /*
+        Initialize interactive filters and sorting.
+        => ../modules/filters_sort.js
+    */
+  filtersAndSort.init();
+
+    /*
+        Category page swatch hover:
+            Change category image color
+            when swatch is hovered
+    */
+  categorySwatchHover();
+
+    // Highlight active page in pagination bar
+  if (pagination) {
+    pagination.find('.page').each(function() {
+      var pageLabel = $(this);
+      if (pageLabel.parent('a').attr('href') === '') {
+        pageLabel.addClass('active');
+      }
+    });
+  }
+}());
+
+
+```
