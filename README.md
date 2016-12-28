@@ -1367,6 +1367,88 @@ $(document).ready(function () {
 ```
 
 
-```js
+```html
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test tooltip only</title>
+	<!-- sass/modules/_tooltips.scss -->
+	<link rel="stylesheet" href="https://www.secure-payment-portal.com/meta/pie/0001/0030/0777/colors.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+
+
+<br><br><br><br><br>
+<div class="has-tooltip" data-say="Credit card is a default payment method and can't be hidden.">test tooltip</div>
+
+
+
+<script type="text/javascript">
+(function ($){
+	$.fn.tooltip = function () {
+	  // var settings = $.fn.extend({
+	  //     direction: 'top'
+	  //   }, options),
+	  function tooltipOn() {
+	    var el = $(this),
+	      tip = el.data('say'),
+	      tooltip = el.find('.tooltip');
+	    if (!tip || tip == '') {
+	      return false;
+	    }
+	    if (tooltip) {
+	      tooltip.remove();
+	    }
+	    $('<div></div>')
+	          .html(tip)
+	          .addClass('tooltip')
+	          .prependTo(el);
+	    if (el.outerWidth() < 240) {
+	      el
+	        .find('.tooltip')
+	        .css({
+	          'width': el.width() * 2,
+	          'left': '-50%'
+	        });
+	    }
+	  }
+
+	  function tooltipOff() {
+	    var el = $(this);
+	    var tooltip = el.find('.tooltip');
+	    tooltip.remove();
+	  }
+
+	  this.each(function () {
+	    var self = $(this);
+	    self.on('mouseover focus', tooltipOn);
+	    self.on('mouseout blur', tooltipOff);
+	  });
+	};
+
+}(jQuery));
+
+
+(function () {
+  'use strict';
+
+    /*
+        Tooltips: currently only showing on top.
+        Customization will be added in the next version
+        => ../modules/interface.js
+    */
+  $('.has-tooltip').tooltip();
+
+}()); 
+
+</script>
+
+
+
+</body>
+</html>
+
 
 ```
