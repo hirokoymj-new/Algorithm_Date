@@ -1452,3 +1452,105 @@ $(document).ready(function () {
 
 
 ```
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+	<title>module test</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</head>
+<body>
+
+<a href="">test1</a>
+<a href="">test2</a>
+<a href="">test3</a>
+
+<button class="myButton">MY BUTTON HEREafdasfdaasd</button>
+
+<form id="myForm">
+	<input type="text" name="firstname" id="firstname" />
+	<input type="submit" id="submitBtn" value="add">
+
+</form>
+
+<ul class="myList"></ul>
+
+<script type="text/javascript">
+	
+var mypageModule = (function(){
+	'use strict';
+	// private
+	var data = ['hiroko', 'kayo', 'daisuke'];
+	var myButton = $('.myButton');
+	var myList = $('.myList');
+	var submitBtn = $('#submitBtn');
+	var firstname = $('#firstname');
+	var links = $('a');
+
+	// private methods
+	function showObjText(){
+		console.log($(this).text());
+	}
+
+	function linkColor(){
+		links.css('color', 'green');
+	}
+
+	function add(event){
+		event.preventDefault();
+		//var firstname = $('#firstname').val();
+		var val = firstname.val();
+		data.push(val);
+		show();
+	}
+
+	function show(){
+		myList.find('li').remove();
+		data.forEach(function(value, index){
+			myList.append("<li>" + value + " <button data-id="+ index +" class='del'>delete</button></li>");
+		})
+	}
+
+	function popoup(){
+		alert('testestaseta');
+	}
+
+	function del(){
+		console.log('delete data');
+		var id = $(this).data('id');
+		data.splice(id, 1);
+		show();
+	}
+
+	// global
+	return{
+		init: function(){
+			show();
+			linkColor();
+			//popoup();
+
+			 /* === User Event triggers === */
+			myButton.on('click', showObjText);
+			submitBtn.on('click', add);
+			//$('.del').on('click', del);
+
+			$('.del').on('click', del());
+
+		}
+	}
+
+}());
+
+
+mypageModule.init();
+
+
+</script>
+</body>
+</html>
+
+
+```
+
