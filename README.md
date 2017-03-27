@@ -24,7 +24,12 @@ var url = window.location.href;
 console.log(url); //http://www.cherokeenursingscholarship.com/content/about.php"
 ```
 
-### Get a page from URL
+### Get a page name.
+```
+var url = window.location.href;
+var pageName = url.substring(url.lastIndexOf('/')+1);
+console.log(pageName); //about.php
 
+```
 http://www.cherokeenursingscholarship.com/content/about.php
 
