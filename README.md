@@ -18,8 +18,13 @@ console.log(tomorrow); //Fri Dec 09 2016 08:32:48 GMT-0800 (PST)
 # Algorithm - String
 
 
-## Get url
-## Get a page from URL
+### Get url
+```
+var url = window.location.href;
+console.log(url); //http://www.cherokeenursingscholarship.com/content/about.php"
+```
+
+### Get a page from URL
 
 http://www.cherokeenursingscholarship.com/content/about.php
 
