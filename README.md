@@ -37,6 +37,14 @@ var pathname = window.location.pathname;
 "/hirokoymj/Algorithm_Date/edit/master/README.md"
 ```
 
+## Get a file name from url.
+```
+var url = "https://github.com/hirokoymj/Algorithm_Date/edit/master/README.md";
+var filename = url.substring(url.lastIndexOf('/')+1);
+console.log(filename); //README.md
+```
+
+
 ## Get domain name and path name using Regular expression
 1. Creating a regular expression using enclosed between slashes or RegExp object.
 2. ? means non-greedy.
