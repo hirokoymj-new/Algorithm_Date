@@ -6,7 +6,8 @@
 3. [Get URL](#get-url)
 4. [Get a domain name](#get-domain-name)
 5. [Get a path name](#get-a-path-name)
-6. [Get domain and pathname using regular expression](#get-domain-name-and-path-name-using-regular-expression) 
+6. [Get a file name](#get-a-file-name-from-url)
+7. [Get domain and pathname using regular expression](#get-domain-name-and-path-name-using-regular-expression) 
 
 
 ## Show tomorrow date
