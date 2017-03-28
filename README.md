@@ -41,4 +41,8 @@ console.log(tmp);
 var tmp1 = tmp.substring(tmp.indexOf('/')+1);
 console.log(tmp1);
 ```
-https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/
+
+### References:
+
+[CSS-TRICKS GET URL and URL Parts in JavaScript](https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/)
+
