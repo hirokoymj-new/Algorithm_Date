@@ -1,4 +1,4 @@
-# Algorithm - Date
+# Algorithm - Date and String
 
 ## table of contents
 1. [Show tomorrow date](#show-tomorrow-date)
