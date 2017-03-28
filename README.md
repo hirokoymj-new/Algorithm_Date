@@ -54,6 +54,6 @@ console.log(pageName);	//hirokoymj/Algorithm_Date/edit/master/README.md
 ```
 
 ### References:
-[CSS-TRICKS GET URL and URL Parts in JavaScript](https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/)
-[MDN - Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-[stackoverflow - regular expression](http://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url)
+- [CSS-TRICKS GET URL and URL Parts in JavaScript](https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/)
+- [MDN - Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+- [stackoverflow - regular expression](http://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url)
