@@ -3,6 +3,10 @@
 ## table of contents
 1. [Show tomorrow date](#show-tomorrow-date)
 2. [Define Date.nextDay using prototype](#)
+3. [Get URL](#get-url)
+4. [Get a domain name](#get-domain-name)
+5. [Get a path name](#get-a-path-name)
+6. [Get domain and pathname using regular expression](#get-domain-name-and-path-name-using-regular-expression) 
 
 
 ## Show tomorrow date
@@ -14,9 +18,6 @@ tomorrow.setDate(today.getDate()+1);
 console.log(today);//Thu Dec 08 2016 08:35:42 GMT-0800 (PST)
 console.log(tomorrow); //Fri Dec 09 2016 08:32:48 GMT-0800 (PST)
 ```
-
-# Algorithm - String
-
 
 ## Get URL.
 ```
