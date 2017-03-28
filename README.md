@@ -37,6 +37,10 @@ var pathname = window.location.pathname;
 ```
 
 ## Get domain name and path name using Regular expression
+1. Creating a regular expression using enclosed between slashes or RegExp object.
+2. ? means non-greedy.
+3. () is grouping and can access using $n.
+
 ```
 var url = 'https://github.com/hirokoymj/Algorithm_Date/edit/master/README.md';
 var reg = new RegExp('(http|https)://(.+?)\/(.+)');
@@ -50,5 +54,5 @@ console.log(pageName);	//hirokoymj/Algorithm_Date/edit/master/README.md
 
 ### References:
 [CSS-TRICKS GET URL and URL Parts in JavaScript](https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/)
-[]()
-
+[MDN - Regular Expressions](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
+[stackoverflow - regular expression](http://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url)
