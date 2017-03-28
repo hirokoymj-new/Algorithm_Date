@@ -18,31 +18,37 @@ console.log(tomorrow); //Fri Dec 09 2016 08:32:48 GMT-0800 (PST)
 # Algorithm - String
 
 
-### Get url string.
+## Get URL.
 ```
-var url = window.location.href;
-console.log(url); //http://www.cherokeenursingscholarship.com/content/about.php"
+window.location.href;
+"https://github.com/hirokoymj/Algorithm_Date/edit/master/README.md"
 ```
 
-### Get a page name.
+## Get domain name.
 ```
-var url = window.location.href; //http://www.cherokeenursingscholarship.com/content/about.php
-var pageName = url.substring(url.lastIndexOf('/')+1);
-console.log(pageName); //about.php
-
+window.location.host;
+"github.com"
 ```
-### Get a page name without domain.
+
+## Get a path name.
 ```
-var url = "http://www.cherokeenursingscholarship.com/content/about.php";
+var pathname = window.location.pathname;
+"/hirokoymj/Algorithm_Date/edit/master/README.md"
+```
 
-var tmp = url.substring(7);
-console.log(tmp);
-
-var tmp1 = tmp.substring(tmp.indexOf('/')+1);
-console.log(tmp1);
+## Get domain name and path name using Regular expression
+```
+var url = 'https://github.com/hirokoymj/Algorithm_Date/edit/master/README.md';
+var reg = new RegExp('(http|https)://(.+?)\/(.+)');
+var protocol = url.replace(reg, '$1');
+var domain = url.replace(reg, '$2');
+var pageName = url.replace(reg, '$3');
+console.log(protocol); //https
+console.log(domain);	//github.com
+console.log(pageName);	//hirokoymj/Algorithm_Date/edit/master/README.md
 ```
 
 ### References:
-
 [CSS-TRICKS GET URL and URL Parts in JavaScript](https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/)
+[]()
 
