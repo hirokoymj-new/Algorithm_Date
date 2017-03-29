@@ -52,14 +52,15 @@ console.log(filename); //README.md
 3. () is grouping and can access using $n.
 
 ```
-var url = 'https://github.com/hirokoymj/Algorithm_Date/edit/master/README.md';
-var reg = new RegExp('(http|https)://(.+?)\/(.+)');
-var protocol = url.replace(reg, '$1');
-var domain = url.replace(reg, '$2');
-var pageName = url.replace(reg, '$3');
-console.log(protocol); //https
-console.log(domain);	//github.com
-console.log(pageName);	//hirokoymj/Algorithm_Date/edit/master/README.md
+var url = "https://github.com/hirokoymj/Algorithm_Date/edit/master/README.md";
+var reg = new RegExp('https://(.+?)/(.+)');
+var host = url.replace(reg, '$1');
+var pathname = url.replace(reg, '$2');
+var filename = url.substring(url.lastIndexOf('/')+1);
+
+console.log(host); 		//github.com
+console.log(pathname); //hirokoymj/Algorithm_Date/edit/master/README.md
+console.log(filename); //README.md
 ```
 
 ### References:
