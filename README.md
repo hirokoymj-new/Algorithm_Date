@@ -47,9 +47,13 @@ console.log(filename); //README.md
 
 
 ## Get domain name, path name and file name using Regular expression
-1. Creating a regular expression using enclosed between slashes or RegExp object.
+1. Creating a regular expression object. `var reg = new RegExp()`
 2. ? means non-greedy.
 3. () is grouping and can access using $n.
+4. Use string.replace() method.
+5. Use string.substring() method.
+6. Use string.lastIndexOf() method.
+
 
 ```
 var url = "https://github.com/hirokoymj/Algorithm_Date/edit/master/README.md";
