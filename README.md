@@ -46,7 +46,7 @@ console.log(filename); //README.md
 ```
 
 
-## Get domain name and path name using Regular expression
+## Get domain name, path name and file name using Regular expression
 1. Creating a regular expression using enclosed between slashes or RegExp object.
 2. ? means non-greedy.
 3. () is grouping and can access using $n.
