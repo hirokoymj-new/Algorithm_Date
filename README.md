@@ -66,7 +66,7 @@ console.log(host); 		//github.com
 console.log(pathname); //hirokoymj/Algorithm_Date/edit/master/README.md
 console.log(filename); //README.md
 ```
-## Different between forEach() and each()
+## Differences between forEach() and each().
 - forEach() is JavaScript function to iterate for Array. - Array.forEach()
 - each() is jQuery function to iterate HTML. $('li').each()
 // forEach
