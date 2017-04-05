@@ -66,6 +66,34 @@ console.log(host); 		//github.com
 console.log(pathname); //hirokoymj/Algorithm_Date/edit/master/README.md
 console.log(filename); //README.md
 ```
+## Different between forEach() and each()
+- forEach() is JavaScript function to iterate for Array. - Array.forEach()
+- each() is jQuery function to iterate HTML. $('li').each()
+// forEach
+```
+var employees = [
+  { skill: 'css', user: 'Bill' },
+  { skill: 'javascript', user: 'Chad' },
+  { skill: 'javascript', user: 'Bill' },
+  { skill: 'css', user: 'Sue' },
+  { skill: 'javascript', user: 'Sue' },
+  { skill: 'html', user: 'Sue' }
+];
+employees.forEach(function(value, index){
+	console.log(value + ',' + index);
+})
+
+
+```
+
+// $.each()
+```
+$('li').each(function(value){
+
+});
+```
+
+
 
 ### References:
 - [CSS-TRICKS GET URL and URL Parts in JavaScript](https://css-tricks.com/snippets/javascript/get-url-and-url-parts-in-javascript/)
