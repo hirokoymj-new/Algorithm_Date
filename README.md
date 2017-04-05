@@ -101,4 +101,6 @@ $('li a').each(function(value){
 - [MDN - replace method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace)
 - [MDN - substring method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
 - [MDN - lastIndexOf method](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/lastIndexOf)
+- [MDN - forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+- [jQuery - $.each](https://api.jquery.com/each/)
 - [stackoverflow - regular expression](http://stackoverflow.com/questions/3809401/what-is-a-good-regular-expression-to-match-a-url)
