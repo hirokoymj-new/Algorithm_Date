@@ -8,6 +8,7 @@
 5. [Get a path name](#get-a-path-name)
 6. [Get a file name](#get-a-file-name-from-url)
 7. [Get domain and pathname using regular expression](#get-domain-name-and-path-name-using-regular-expression) 
+8. [Differences between each() and forEach().](#differences-between-foreach-and-each)
 
 
 ## Show tomorrow date
