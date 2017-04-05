@@ -67,13 +67,10 @@ console.log(pathname); //hirokoymj/Algorithm_Date/edit/master/README.md
 console.log(filename); //README.md
 ```
 ## Differences between forEach() and each().
-*forEach()*
->forEach() is JavaScript function to iterate for Array. - Array.forEach()
+1. **forEach()** is JavaScript function to iterate for Array. - Array.forEach().
+2. **each()** is jQuery function to iterate HTML.
 
-*$.each()*
->each() is jQuery function to iterate HTML. $('li').each()
-
-Example - forEach
+forEach
 ```
 var employees = [
   { skill: 'css', user: 'Bill' },
@@ -86,14 +83,12 @@ var employees = [
 employees.forEach(function(value, index){
 	console.log(value + ',' + index);
 })
-
-
 ```
 
-// $.each()
+$.each()
 ```
-$('li').each(function(value){
-
+$('li a').each(function(value){
+  console.log($(this).attr('href');
 });
 ```
 
